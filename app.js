@@ -54,23 +54,10 @@ if(savedUsername === null) {
 
 } else {
     // show the greetings
-    loginForm.classList.add(HIDDEN_CLASSNAME);
+    // loginForm.classList.add(HIDDEN_CLASSNAME);
     // greeting.innerText = `Hello ${savedUsername}`;
     // greeting.classList.remove(HIDDEN_CLASSNAME);
     // =>
     paintGreetings(savedUsername);
 }
 
-
-const logoutForm = document.querySelector("#logout");
-
-function onLogoutSubmit(event) {
-    event.preventDefault();
-
-    loginForm.classList.remove(HIDDEN_CLASSNAME); 
-
-    localStorage.removeItem(USERNAME_KEY);
-    
-}
-
-logoutForm.addEventListener("submit", onLogoutSubmit);
